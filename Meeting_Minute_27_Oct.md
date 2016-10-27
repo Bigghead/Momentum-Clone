@@ -49,7 +49,7 @@ All files must be documented with (1) a purpose, (2) authors
 All functions must be commented with at least a description. Types of parameters & returned values must be commented as well if any
 
 Style: [JSDoc](http://usejsdoc.org/about-getting-started.html)
-	e.g. /**To display minute*/
+	```e.g. /**To display minute*/```
 
 #####b. Naming
 Variables - ?
