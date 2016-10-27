@@ -16,7 +16,7 @@
 
 Mo - Shav: Weather API
 
-Bob - Tu An: Local Storage API
+Bob - Tu An: To Do List
 
 ####3. Tools
 ##### a. Code Documentation
