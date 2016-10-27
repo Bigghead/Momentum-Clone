@@ -33,6 +33,7 @@ Publish all the latest progress regardless of completion level at the end of eac
 
 	Naming convention: [AuthorName]/[coreFeature]
 	e.g TuAn/Documentation
+	
 ##### c. Meeting:
 Skype
 ##### d. Pair programming:
@@ -57,6 +58,23 @@ Variables - ?
 Functions - ?
 
 Classes - ?
+
+####c. Collaboration
+1. Non-collaborators
+- New contributors can start from forking the repo 
+- Clone the forked repo `git clone [repo.git]`
+- Create a new branch locally `git checkout -b [branchName]` 
+- Push to the remote repo `git push`
+- Submit a pull request on the original git repo of Bigghead
+- Track the original repo of Bigghead locally based on this [guide](https://help.github.com/articles/changing-a-remote-s-url/)
+
+2. Directly become a collaborator
+- Request in #Momentum private channel
+- Go to your email to accept the invitation
+- Clone this original repo locally
+- Create a new branch locally and start development
+
+
 
 
 
