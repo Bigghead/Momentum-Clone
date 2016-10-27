@@ -61,6 +61,7 @@ Classes - ?
 
 ####c. Collaboration
 1. Non-collaborators
+
 - New contributors can start from forking the repo 
 - Clone the forked repo `git clone [repo.git]`
 - Create a new branch locally `git checkout -b [branchName]` 
@@ -68,7 +69,9 @@ Classes - ?
 - Submit a pull request on the original git repo of Bigghead
 - Track the original repo of Bigghead locally based on this [guide](https://help.github.com/articles/changing-a-remote-s-url/)
 
+
 2. Directly become a collaborator
+
 - Request in #Momentum private channel
 - Go to your email to accept the invitation
 - Clone this original repo locally
