@@ -1,7 +1,5 @@
 #FCC FOXES COHORT 2016
 
-###Contributors:
-
 ##Goals:
 To clone the [Momentum Dashboard](https://momentumdash.com/)
 
@@ -16,3 +14,6 @@ http://codepen.io/tropicalchancer/full/RGaQwq/ by @chance
 
 ##Task Distribution
 
+Mo - Shav: Weather API
+
+Bob - Tu An: To Do List
