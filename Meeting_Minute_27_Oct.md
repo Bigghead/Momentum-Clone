@@ -13,7 +13,8 @@
 
 #####Current pairing:
 *Based on availability*
-Mo - Shav: Weather API
+
+Mo - Shav: Weather API ; 
 Bob - Tu An: Local Storage API
 
 ####3. Tools 
