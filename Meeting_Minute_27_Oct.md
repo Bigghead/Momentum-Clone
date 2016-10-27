@@ -24,9 +24,15 @@ Use the style of [JSDoc 3 style](http://usejsdoc.org/about-getting-started.html)
 Use [doclets.io](https://doclets.io/) for automatically updating & hosting documents
 ##### b. Project Management
 GitHub issues for tasks & technical discussions
+
 Each issue will be assigned to a pair of assignees
+
 Project board on GitHub to track progress
-Publish all the latest progress regardless of completion level at the end of each pair-programming session 
+
+Publish all the latest progress regardless of completion level at the end of each pair-programming session to a new branch - NOT MASTER or GITHUB-PAGES 
+
+	Naming convention: [AuthorName]/[coreFeature]
+	e.g TuAn/Documentation
 ##### c. Meeting:
 Skype
 ##### d. Pair programming:
@@ -35,3 +41,22 @@ Skype
 github-pages branch
 ##### f. Style:
 [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+####4. Conventions
+#####a. Comments
+All files must be documented with (1) a purpose, (2) authors
+
+All functions must be commented with at least a description. Types of parameters & returned values must be commented as well if any
+
+Style: [JSDoc](http://usejsdoc.org/about-getting-started.html)
+	e.g. /**To display minute*/
+
+#####b. Naming
+Variables - ?
+
+Functions - ?
+
+Classes - ?
+
+
+
