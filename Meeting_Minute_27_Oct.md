@@ -20,7 +20,7 @@ Bob - Tu An: Local Storage API
 
 ####3. Tools
 ##### a. Code Documentation
-Use [JSDoc 3 style](http://usejsdoc.org/about-getting-started.html)
+Use the style of [JSDoc 3 style](http://usejsdoc.org/about-getting-started.html)
 Use [doclets.io](https://doclets.io/) for automatically updating & hosting documents
 ##### b. Project Management
 GitHub issues for tasks & technical discussions
@@ -33,3 +33,5 @@ Skype
 ?
 ##### e. Deployment:
 github-pages branch
+##### f. Style:
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
