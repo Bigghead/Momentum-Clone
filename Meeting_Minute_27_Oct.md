@@ -12,9 +12,10 @@
 | @mojjammil        | Weekends, 7.30 - 11.00am. Weekdays 6:30 to 9:45AM| UTC+3:00      |
 
 #####Current pairing:
-*Based on availability*
+**Based on availability**
 
-Mo - Shav: Weather API ; 
+Mo - Shav: Weather API
+ 
 Bob - Tu An: Local Storage API
 
 ####3. Tools 
