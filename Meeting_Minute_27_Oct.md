@@ -19,18 +19,17 @@ Mo - Shav: Weather API
 Bob - Tu An: Local Storage API
 
 ####3. Tools
-
 ##### a. Code Documentation
-	Use [JSDoc 3 style](http://usejsdoc.org/about-getting-started.html)
-	Use [doclets.io](https://doclets.io/) for automatically updating & hosting documents
+Use [JSDoc 3 style](http://usejsdoc.org/about-getting-started.html)
+Use [doclets.io](https://doclets.io/) for automatically updating & hosting documents
 ##### b. Project Management
-	GitHub issues for tasks & technical discussions
-	Each issue will be assigned to a pair of assignees
-	Project board on GitHub to track progress
-	Publish all the latest progress regardless of completion level at the end of each pair-programming session 
+GitHub issues for tasks & technical discussions
+Each issue will be assigned to a pair of assignees
+Project board on GitHub to track progress
+Publish all the latest progress regardless of completion level at the end of each pair-programming session 
 ##### c. Meeting:
-	Skype
+Skype
 ##### d. Pair programming:
-	?
+?
 ##### e. Deployment:
-	github-pages branch
+github-pages branch
