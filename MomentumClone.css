@@ -14,6 +14,7 @@ body{
 #weather-container{
   text-align:right;
   font-size:2em;
+  font-family: 'Oswald', sans-serif;
 }
 
 #temperature{
