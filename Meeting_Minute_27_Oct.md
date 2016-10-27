@@ -34,6 +34,7 @@ Publish all the latest progress regardless of completion level at the end of eac
 	Naming convention: [AuthorName]/[coreFeature]
 	e.g TuAn/Documentation
 	
+A good GUI for Github repo is [SourceTree](https://www.sourcetreeapp.com/) - a very easy tool to use for Git beginners
 ##### c. Meeting:
 Skype
 ##### d. Pair programming:
@@ -60,6 +61,7 @@ Functions - ?
 Classes - ?
 
 ####c. Collaboration
+Please avoid rebasing your branch to master. Highly appreciated!
 ######Non-collaborators
 
 - New contributors can start from forking the repo 
