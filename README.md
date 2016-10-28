@@ -11,6 +11,7 @@ http://codepen.io/tropicalchancer/full/RGaQwq/ by @chance
 - Time where you are
 - ToDo List(don't know know to save inputs so they don't get deleted everytime you close the tab)
 - quote
+- Generate randome HD images
 
 ##Task Distribution
 
