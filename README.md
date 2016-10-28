@@ -17,3 +17,5 @@ http://codepen.io/tropicalchancer/full/RGaQwq/ by @chance
 Mo - Shav: Weather API
 
 Bob - Tu An: To Do List
+
+**The main page to be rendered by GitHub Pages is index.html**
