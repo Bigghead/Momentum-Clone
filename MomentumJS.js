@@ -60,21 +60,21 @@ var currentDate = document.getElementById('date');
 		var minutes = time.getMinutes();
 		var seconds = time.getSeconds();
 		
-		var ampm = '';
+		var ampm = 'AM';
 		
 		var date = time.getDate();
 		var month = time.getMonth();
 		if(minutes < 10){
 			minutes = '0' + minutes;
 		}
-		if( hours === 0){
+		if(hours === 0){
 			hours = 12;
+		} else if(hours < 10){
+			hours = '0' + hours;
 		} else if(hours > 12){
 			hours = hours - 12;
 			ampm = 'PM';
-		} else if(hours < 12){
-			ampm = 'AM';
-		} 
+		}
 		
 		
 		currentTime.innerText = hours +':' + minutes + ' ' + ampm;
