@@ -51,4 +51,46 @@ geoRequest.onload = function() {
 
 	geoRequest.send();
 
+	//Time Implementation
+var currentTime = document.getElementById('time');
+var currentDate = document.getElementById('date');
+	setInterval(function(){
+		var time = new Date();
+		var hours = time.getHours()
+		var minutes = time.getMinutes();
+		var seconds = time.getSeconds();
+		
+		var ampm = '';
+		
+		var date = time.getDate();
+		var month = time.getMonth();
+		if(minutes < 10){
+			minutes = '0' + minutes;
+		}
+		if(hours > 12){
+			hours = hours - 12;
+			ampm = 'PM';
+		} else if(hours < 12){
+			ampm = 'AM';
+		} else if( hours = 00){
+			hours = 12;
+		}
+		
+		
+		currentTime.innerText = hours +':' + minutes + ' ' + ampm;
+		currentDate.innerText = month + '/' +date;
+	}, 1000);
+
+//Random Quote
+var randomQuote = document.getElementById('randomQuote');
+var quote = new XMLHttpRequest();
+	quote.open('GET', 'http://quotes.rest/qod.json');
+	quote.onload = function(){
+		var randomQuotes = JSON.parse(quote.responseText);
+		console.log(randomQuotes);
+		randomQuote.innerText = randomQuotes.contents.quotes[0].quote;
+	};
+	
+	quote.send();
+
 	
