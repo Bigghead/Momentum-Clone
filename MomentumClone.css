@@ -25,6 +25,11 @@ body{
   font-size:0.5em; 
 }
 
+/*Quote Line */
+#randomQuote{
+  text-align:center;
+}
+
 input{
   width : 50%;
   height: 25px;
