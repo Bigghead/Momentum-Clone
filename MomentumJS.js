@@ -72,7 +72,7 @@ var currentDate = document.getElementById('date');
 			ampm = 'PM';
 		} else if(hours < 12){
 			ampm = 'AM';
-		} else if( hours = 00){
+		} else if( hours = 0){
 			hours = 12;
 		}
 		
