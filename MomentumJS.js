@@ -1,13 +1,8 @@
-//background-image
 
+
+//===============Background Image================
 var url = "https://source.unsplash.com/1600x900/?nature,morning"
-
-// var backImage = document.getElementsByClassName('background-container')[0];
-// backImage.style.backgroundImage = "url" +"("+url+")";
-	document.body.style.backgroundImage = "url" +"("+url+")"
-
-
-
+document.body.style.backgroundImage = "url" +"("+url+")"
 
 
 // location function API call
@@ -106,7 +101,7 @@ var quote = new XMLHttpRequest();
 	quote.send();
 
 
-//==============Random Background=========
+//==============Basic ToDo Functionality=========
 var input = document.querySelector('input');
 input.addEventListener('keypress', function(e){
 	if(e.keyCode === 13){
