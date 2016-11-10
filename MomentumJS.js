@@ -1,3 +1,13 @@
+//background-image
+
+var url = "https://source.unsplash.com/1600x900/?nature,morning"
+
+// var backImage = document.getElementsByClassName('background-container')[0];
+// backImage.style.backgroundImage = "url" +"("+url+")";
+	document.body.style.backgroundImage = "url" +"("+url+")"
+
+
+
 
 
 // location function API call
@@ -51,4 +61,66 @@ geoRequest.onload = function() {
 
 	geoRequest.send();
 
-	
+
+
+	//Time Implementation
+var currentTime = document.getElementById('time');
+var currentDate = document.getElementById('date');
+	setInterval(function(){
+		var time = new Date();
+		var hours = time.getHours()
+		var minutes = time.getMinutes();
+		var seconds = time.getSeconds();
+
+		var ampm = 'AM';
+
+		var date = time.getDate();
+		var month = time.getMonth();
+		if(minutes < 10){
+			minutes = '0' + minutes;
+		}
+		if(hours === 0){
+			hours = 12;
+		} else if(hours < 10){
+			hours = '0' + hours;
+		} else if(hours > 12){
+			hours = hours - 12;
+			ampm = 'PM';
+		}
+
+
+		currentTime.innerText = hours +':' + minutes + ' ' + ampm;
+		currentDate.innerText = month + '/' +date;
+	}, 1000);
+
+//Random Quote
+var randomQuote = document.getElementById('randomQuote');
+var quote = new XMLHttpRequest();
+	quote.open('GET', 'http://quotes.rest/qod.json');
+	quote.onload = function(){
+		var randomQuotes = JSON.parse(quote.responseText);
+		console.log(randomQuotes);
+		randomQuote.innerText = randomQuotes.contents.quotes[0].quote;
+	};
+
+	quote.send();
+
+
+//==============Random Background=========
+var input = document.querySelector('input');
+input.addEventListener('keypress', function(e){
+	if(e.keyCode === 13){
+		var todo = input.value;
+		var node = document.createElement('LI');
+		node.innerHTML = todo;
+		var todoInput = document.querySelector('ul');
+		todoInput.appendChild(node);
+		input.value = '';
+		input.style.display = 'none';
+
+			node.addEventListener('click', function(){
+				input.style.display = '';
+				this.parentNode.removeChild(this);
+				});
+	}
+});

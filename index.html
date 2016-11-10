@@ -1,30 +1,39 @@
 <html>
-  <head>
-    <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
-    <script type="text/javascript" src='MomentumJS.js'></script>
-    <link rel="stylesheet" href="MomentumClone.css" media="screen" title="no title">
-    
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<head>
+  <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="MomentumClone.css" media="screen" title="no title">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://erikflowers.github.io/weather-icons/css/weather-icons.css">
+</head>
+<body>
+  <div class="background-container">
+    <div id="weather-container">
+      <i id="weather-icon"class="wi wi-day-sunny"></i><span id='temperature'></span>
+      <br/>
+      <div id="region"></div>
+    </div> <!-- end weather container -->
 
-<link rel="stylesheet" type="text/css" href="https://erikflowers.github.io/weather-icons/css/weather-icons.css">
-  </head>
-  <body>
-  <div id="weather-container">
-    <i id="weather-icon"class="wi wi-day-sunny"></i><span id='temperature'></span>
-    <br/>
-     <div id="region"></div>
-    </div>
-  
     <div id='container'>
-    <h1>Time</h1>
-    <h2>Good Morning,</h2>
-    <h2>What is your main focus for today?</h2>
+      <h1 id='date'></h1>
+      <h1 id='time'></h1>
+      <h2>Good Morning,</h2>
+      <h2>What is your main focus for today?</h2>
       <p>Want to see how to apply these changes.</p>
-      
+
 
       <!-- todo list -->
       <input type="text" />
       <ul></ul>
+
+      <div>
+        <h3 id='randomQuote'>random quote</h3>
+      </div>
     </div>
-  </body>
+
+
+
+  </div>  <!-- end background-container -->
+
+  <script type="text/javascript" src='MomentumJS.js'></script>
+</body>
 </html>
