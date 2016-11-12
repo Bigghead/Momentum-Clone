@@ -1,7 +1,8 @@
 
 
 //===============Background Image================
-var url = "https://source.unsplash.com/1600x900/?nature,morning"
+
+var url = "https://source.unsplash.com/1600x900/?nature,morning";
 document.body.style.backgroundImage = "url" +"("+url+")"
 
 
@@ -91,11 +92,11 @@ var currentDate = document.getElementById('date');
 //Random Quote
 var randomQuote = document.getElementById('randomQuote');
 var quote = new XMLHttpRequest();
-	quote.open('GET', 'http://quotes.rest/qod.json');
+	quote.open('GET', 'https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&' + new Date().getTime().toString());
 	quote.onload = function(){
 		var randomQuotes = JSON.parse(quote.responseText);
 		console.log(randomQuotes);
-		randomQuote.innerText = randomQuotes.contents.quotes[0].quote;
+		randomQuote.innerText = randomQuotes.quoteText;
 	};
 
 	quote.send();
@@ -107,15 +108,30 @@ input.addEventListener('keypress', function(e){
 	if(e.keyCode === 13){
 		var todo = input.value;
 		var node = document.createElement('LI');
-		node.innerHTML = todo;
+		node.innerHTML = '<button>O</button> '+todo+' <span class="remove"> X</span>';
 		var todoInput = document.querySelector('ul');
 		todoInput.appendChild(node);
 		input.value = '';
 		input.style.display = 'none';
 
-			node.addEventListener('click', function(){
-				input.style.display = '';
-				this.parentNode.removeChild(this);
+			  // node.addEventListener('click', function(){
+				// input.style.display = '';
+				// this.parentNode.removeChild(this);
+				// });
+
+				var button = document.querySelector('button');
+				button.addEventListener('click', function(){
+					this.parentNode.classList.toggle('done');
 				});
+
+				var remove = document.querySelector('.remove');
+				console.log(remove);
+				remove.addEventListener('click', function(){
+					node.parentNode.removeChild(node);
+					input.style.display = '';
+				});
+
+
+
 	}
 });

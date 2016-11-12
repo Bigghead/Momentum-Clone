@@ -71,8 +71,41 @@ input:focus{
 
 ul{
   list-style-type: none;
+  padding: 0;
 }
 
 li{
   text-align: center;
+  margin: auto;
+}
+
+
+.remove{
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+
+
+button {
+  color: #fff;
+  background-color: #6496c8;
+  border-radius: 15px;
+  box-shadow: 0 2px #27496d;
+}
+
+button:hover,
+button.hover {
+  cursor: pointer;
+  background-color: #417cb8
+}
+
+.done{
+  text-decoration: line-through;
+}
+
+.fade-out {
+  opacity: 0;
+  animation: fadeOut .5s ease-in 1 forwards;
 }
