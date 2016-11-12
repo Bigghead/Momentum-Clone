@@ -31,6 +31,7 @@ body{
   text-align:right;
   font-size:2em;
   font-family: 'Oswald', sans-serif;
+  margin-right: 10px;
 }
 
 #temperature{
