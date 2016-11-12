@@ -125,7 +125,6 @@ input.addEventListener('keypress', function(e){
 				});
 
 				var remove = document.querySelector('.remove');
-				console.log(remove);
 				remove.addEventListener('click', function(){
 					node.parentNode.removeChild(node);
 					input.style.display = '';
