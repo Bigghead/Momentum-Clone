@@ -22,7 +22,7 @@ body{
 #container{
   width: 70%;
   margin:auto;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: center;
 }
 
@@ -42,13 +42,14 @@ body{
 }
 
 #time{
-  font-size: 5em;
+  font-size: 10em;
+  margin-bottom:0;
 }
 
 /*Quote Line */
 #randomQuote{
   text-align:center;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 input{

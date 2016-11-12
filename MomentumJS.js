@@ -96,7 +96,7 @@ var quote = new XMLHttpRequest();
 	quote.onload = function(){
 		var randomQuotes = JSON.parse(quote.responseText);
 		console.log(randomQuotes);
-		randomQuote.innerText = randomQuotes.quoteText;
+		randomQuote.innerText = '"' + randomQuotes.quoteText + '"';
 	};
 
 	quote.send();
