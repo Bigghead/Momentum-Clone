@@ -1,4 +1,5 @@
 
+console.log(localStorage);
 
 //===============Background Image================
 
@@ -84,6 +85,12 @@ var currentDate = document.getElementById('date');
 			ampm = 'PM';
 		}
 
+		var greeting = document.querySelector('#greeting');
+		if(ampm === 'PM' && hours <= 5){
+			greeting.innerText = 'Good Afternoon,';
+		} else if(ampm === 'PM' && hours >= 5){
+			greeting.innerText = 'Good Evening,';
+		}
 
 		currentTime.innerText = hours +':' + minutes + ' ' + ampm;
 		currentDate.innerText = month + '/' +date;
@@ -106,9 +113,10 @@ var quote = new XMLHttpRequest();
 var input = document.querySelector('input');
 input.addEventListener('keypress', function(e){
 	if(e.keyCode === 13){
-		var todo = input.value;
+		localStorage.setItem('todo', input.value);
+		console.log(localStorage);
 		var node = document.createElement('LI');
-		node.innerHTML = '<button>O</button> '+todo+' <span class="remove"> X</span>';
+		node.innerHTML = '<button>O</button> '+localStorage.getItem('todo')+' <span class="remove"> X</span>';
 		var todoInput = document.querySelector('ul');
 		todoInput.appendChild(node);
 		input.value = '';
