@@ -91,48 +91,45 @@ ul{
 li{
   list-style-type: none;
   font-size: 1.5em;
-  text-align: center;
   margin: auto;
 }
 
 
 .remove{
-  margin-left: 10px;
+  margin-left: 20px;
   border: 2px solid white;
-  border-radius: 100%;
-  padding:auto;
   transition: all 0.7s ease;
+  padding-right: 1px;
   text-align:center;
 }
 
 .remove:hover{
   opacity: .7;
-  border-color: red;
-  color: red;
+  border-color: #B22222;
+  color: #B22222;
   cursor: pointer;
 }
 
 
 
-button {
-  margin-right: 20px;
+.doneTodo {
   color: #fff;
   background-color: #6496c8;
-  border-radius: 15px;
+  border-radius: 50px;
   box-shadow: 0 2px #27496d;
-  margin: auto;
   outline:none;
   transition: all 0.7s ease;
+  margin-right:20px;
 }
 
-button:hover {
+.doneTodo:hover {
   cursor: pointer;
-  background-color: steelblue;
+  background-color: grey;
 }
 
 .done{
   text-decoration: line-through;
-  color: #778899;
+  color: #4B0082;
 }
 
 .fade-out {

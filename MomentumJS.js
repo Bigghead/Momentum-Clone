@@ -120,12 +120,12 @@ var mainFocus = document.querySelector('#mainFocus');
 
 if(localStorage.todo !== 'null'){ //if there is a todo
 	mainFocus.innerText = 'Today\'s Goal: ';
-	node.innerHTML = '<button>O</button> '+localStorage.getItem("todo")+ '<span class="remove"> X</span>';
+	node.innerHTML = '<span class="doneTodo">O</span> '+localStorage.getItem("todo")+ '<span class="remove"> X</span>';
 	todoInput.appendChild(node);
 	input.value = '';
 	input.style.display = 'none';
 
-	  var button = document.querySelector('button');
+	  var button = document.querySelector('.doneTodo');
 	  button.addEventListener('click', function(){
 		this.parentNode.classList.toggle('done');
 	  });
@@ -144,12 +144,12 @@ input.addEventListener('keypress', function(e){
 	if(e.keyCode === 13){
 		mainFocus.innerText = 'Today\'s Goal: ';
 		localStorage.setItem('todo', input.value);
-		node.innerHTML = '<button>O</button> '+localStorage.getItem('todo')+' <span class="remove"> X</span>';
+		node.innerHTML = '<span class="doneTodo">O</span> '+localStorage.getItem('todo')+' <span class="remove"> X</span>';
 		todoInput.appendChild(node);
 		input.value = '';
 		input.style.display = 'none';
 
-				var button = document.querySelector('button');
+				var button = document.querySelector('.doneTodo');
 				button.addEventListener('click', function(){
 					this.parentNode.classList.toggle('done');
 				});
