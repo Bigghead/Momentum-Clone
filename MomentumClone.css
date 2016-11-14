@@ -100,7 +100,7 @@ li{
   transition: all 0.7s ease;
   border: 1px solid white;
   border-radius: 50%;
-  background-color: grey;
+  background-color: #FF6347;
   outline:none;
 }
 
@@ -124,7 +124,7 @@ li{
 
 .doneTodo:hover {
   cursor: pointer;
-  background-color: grey;
+  background-color: black;
 }
 
 .done{
