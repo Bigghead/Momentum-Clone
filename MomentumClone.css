@@ -90,22 +90,22 @@ ul{
 
 li{
   list-style-type: none;
-  font-size: 1.5em;
-  margin: auto;
+  font-size: 2em;
+  margin-top: 15px;;
 }
 
 
 .remove{
   margin-left: 20px;
-  border: 2px solid white;
   transition: all 0.7s ease;
-  padding-right: 1px;
-  text-align:center;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: grey;
+  outline:none;
 }
 
 .remove:hover{
-  opacity: .7;
-  border-color: #B22222;
+  border: 2px solid white;
   color: #B22222;
   cursor: pointer;
 }
@@ -115,8 +115,8 @@ li{
 .doneTodo {
   color: #fff;
   background-color: #6496c8;
-  border-radius: 50px;
-  box-shadow: 0 2px #27496d;
+  border: 2px solid white;
+  border-radius: 100%;
   outline:none;
   transition: all 0.7s ease;
   margin-right:20px;

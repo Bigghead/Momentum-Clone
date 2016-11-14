@@ -120,7 +120,7 @@ var mainFocus = document.querySelector('#mainFocus');
 
 if(localStorage.todo !== 'null'){ //if there is a todo
 	mainFocus.innerText = 'Today\'s Goal: ';
-	node.innerHTML = '<span class="doneTodo">O</span> '+localStorage.getItem("todo")+ '<span class="remove"> X</span>';
+	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.getItem("todo")+ '<span class="remove"> <i class="fa fa-times" aria-hidden="true"></i></span>';
 	todoInput.appendChild(node);
 	input.value = '';
 	input.style.display = 'none';
@@ -144,7 +144,7 @@ input.addEventListener('keypress', function(e){
 	if(e.keyCode === 13){
 		mainFocus.innerText = 'Today\'s Goal: ';
 		localStorage.setItem('todo', input.value);
-		node.innerHTML = '<span class="doneTodo">O</span> '+localStorage.getItem('todo')+' <span class="remove"> X</span>';
+		node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.getItem('todo')+' <span class="remove"> <i class="fa fa-times" aria-hidden="true"></i></span>';
 		todoInput.appendChild(node);
 		input.value = '';
 		input.style.display = 'none';
