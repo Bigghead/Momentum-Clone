@@ -98,12 +98,14 @@ var currentDate = document.getElementById('date');
 
 //Random Quote
 var randomQuote = document.getElementById('randomQuote');
+var author = document.querySelector('.quoteAuthor');
 var quote = new XMLHttpRequest();
-	quote.open('GET', 'https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&' + new Date().getTime().toString());
+	quote.open('GET', 'http://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&' + new Date().getTime().toString());
 	quote.onload = function(){
 		var randomQuotes = JSON.parse(quote.responseText);
 		console.log(randomQuotes);
 		randomQuote.innerText = '"' + randomQuotes.quoteText + '"';
+		author.innerText = '-' + randomQuotes.quoteAuthor;
 	};
 
 	quote.send();
@@ -118,7 +120,7 @@ var mainFocus = document.querySelector('#mainFocus');
 
 if(localStorage.todo !== 'null'){ //if there is a todo
 	mainFocus.innerText = 'Today\'s Goal: ';
-	node.innerHTML = '<button>O</button> '+localStorage.getItem('todo')+' <span class="remove"> X</span>';
+	node.innerHTML = '<button>O</button> '+localStorage.getItem("todo")+ '<span class="remove"> X</span>';
 	todoInput.appendChild(node);
 	input.value = '';
 	input.style.display = 'none';

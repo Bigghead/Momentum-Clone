@@ -54,6 +54,17 @@ body{
   text-shadow: none;
 }
 
+.quoteAuthor{
+  opacity : 0;
+  overflow: hidden;
+  transition: all .7s ease ;
+}
+
+
+#randomQuote:hover + h3{
+opacity: 1;
+}
+
 input{
   width : 50%;
   height: 25px;
@@ -89,10 +100,11 @@ li{
   margin-left: 10px;
   border: 2px solid white;
   border-radius: 100%;
+  padding:auto;
   transition: all 0.7s ease;
-
-
+  text-align:center;
 }
+
 .remove:hover{
   opacity: .7;
   border-color: red;
@@ -103,19 +115,19 @@ li{
 
 
 button {
-  margin-right: 10px;
+  margin-right: 20px;
   color: #fff;
   background-color: #6496c8;
   border-radius: 15px;
   box-shadow: 0 2px #27496d;
   margin: auto;
   outline:none;
+  transition: all 0.7s ease;
 }
 
-button:hover,
-button.hover {
+button:hover {
   cursor: pointer;
-  background-color: #417cb8
+  background-color: steelblue;
 }
 
 .done{
