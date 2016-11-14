@@ -92,7 +92,7 @@ var currentDate = document.getElementById('date');
 			greeting.innerText = 'Good Evening,';
 		}
 
-		currentTime.innerText = hours +':' + minutes + ' ' + ampm;
+		currentTime.innerText = hours +':' + minutes + ' ' + ampm.toLowerCase();
 		currentDate.innerText = month + '/' +date;
 	}, 1000);
 
@@ -111,21 +111,41 @@ var quote = new XMLHttpRequest();
 
 //==============Basic ToDo Functionality=========
 var input = document.querySelector('input');
+var node = document.createElement('LI');
+var todoInput = document.querySelector('ul');
+var mainFocus = document.querySelector('#mainFocus');
+
+
+if(localStorage.todo !== 'null'){ //if there is a todo
+	mainFocus.innerText = 'Today\'s Goal: ';
+	node.innerHTML = '<button>O</button> '+localStorage.getItem('todo')+' <span class="remove"> X</span>';
+	todoInput.appendChild(node);
+	input.value = '';
+	input.style.display = 'none';
+
+	  var button = document.querySelector('button');
+	  button.addEventListener('click', function(){
+		this.parentNode.classList.toggle('done');
+	  });
+
+		var remove = document.querySelector('.remove');
+		remove.addEventListener('click', function(){
+		node.parentNode.removeChild(node);
+		localStorage.todo = 'null';
+		mainFocus.innerText = 'What Is Your Main Focus For Today?';
+		input.style.display = '';
+		});
+}
+
+
 input.addEventListener('keypress', function(e){
 	if(e.keyCode === 13){
+		mainFocus.innerText = 'Today\'s Goal: ';
 		localStorage.setItem('todo', input.value);
-		console.log(localStorage);
-		var node = document.createElement('LI');
 		node.innerHTML = '<button>O</button> '+localStorage.getItem('todo')+' <span class="remove"> X</span>';
-		var todoInput = document.querySelector('ul');
 		todoInput.appendChild(node);
 		input.value = '';
 		input.style.display = 'none';
-
-			  // node.addEventListener('click', function(){
-				// input.style.display = '';
-				// this.parentNode.removeChild(this);
-				// });
 
 				var button = document.querySelector('button');
 				button.addEventListener('click', function(){
@@ -135,10 +155,9 @@ input.addEventListener('keypress', function(e){
 				var remove = document.querySelector('.remove');
 				remove.addEventListener('click', function(){
 					node.parentNode.removeChild(node);
+					localStorage.todo = 'null';
+					mainFocus.innerText = 'What Is Your Main Focus For Today?';
 					input.style.display = '';
 				});
-
-
-
-	}
-});
+    }
+  });
