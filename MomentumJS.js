@@ -1,4 +1,5 @@
 console.log(localStorage);
+//delete localStorage.todo;
 
 
 //===============Background Image================
@@ -103,7 +104,6 @@ var quote = new XMLHttpRequest();
 	quote.open('GET', 'http://quotes.rest/qod.json?category=inspire');
 	quote.onload = function(){
 		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
-		console.log(randomQuotes);
 		randomQuote.innerText = '"' + randomQuotes.contents.quotes[0].quote + '"';
 		author.innerText = '-' + randomQuotes.contents.quotes[0].author;
 	};
@@ -118,8 +118,8 @@ var todoInput = document.querySelector('ul');
 var mainFocus = document.querySelector('#mainFocus');
 
 
-if(localStorage.todo === '' || localStorage.todo === null ||
-  localStorage.todo === 'null'){ //if there is no todo
+if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localStorage.todo === null ||
+  localStorage.todo === 'null')){ //if there is no todo or todo is empty
 		input.addEventListener('keypress', function(e){
 			if(e.keyCode === 13){
 				localStorage.todo = input.value;
