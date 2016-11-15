@@ -100,12 +100,12 @@ var currentDate = document.getElementById('date');
 var randomQuote = document.getElementById('randomQuote');
 var author = document.querySelector('.quoteAuthor');
 var quote = new XMLHttpRequest();
-	quote.open('GET', 'https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&' + new Date().getTime().toString());
+	quote.open('GET', 'http://quotes.rest/qod.json?category=inspire');
 	quote.onload = function(){
 		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
 		console.log(randomQuotes);
-		randomQuote.innerText = '"' + randomQuotes.quoteText + '"';
-		author.innerText = '-' + randomQuotes.quoteAuthor;
+		randomQuote.innerText = '"' + randomQuotes.contents.quotes[0].quote + '"';
+		author.innerText = '-' + randomQuotes.contents.quotes[0].author;
 	};
 
 	quote.send();
