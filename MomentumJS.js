@@ -118,19 +118,21 @@ var todoInput = document.querySelector('ul');
 var mainFocus = document.querySelector('#mainFocus');
 
 
-if(localStorage.todo !== '' || localStorage.todo !== null ||
-  localStorage.todo !== 'null'){ //if there is a todo
+if(localStorage.todo === '' || localStorage.todo === null ||
+  localStorage.todo === 'null'){ //if there is no todo
 		input.addEventListener('keypress', function(e){
 			if(e.keyCode === 13){
 				localStorage.todo = input.value;
-				editTodo();
+				showTodo();
 		    }
 		  });
+ } else {
+	 showTodo();
  }
 
 
 
-function editTodo(){
+function showTodo(){
 	mainFocus.innerText = 'Today\'s Goal: ';
 	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.getItem("todo")+ '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span>';
 	todoInput.appendChild(node);
