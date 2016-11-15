@@ -124,6 +124,7 @@ if(localStorage.todo !== 'null'){ //if there is a todo
 	todoInput.appendChild(node);
 	input.value = '';
 	input.style.display = 'none';
+	node.classList.remove('done');
 
 	  var button = document.querySelector('.doneTodo');
 	  button.addEventListener('click', function(){
@@ -148,6 +149,7 @@ input.addEventListener('keypress', function(e){
 		todoInput.appendChild(node);
 		input.value = '';
 		input.style.display = 'none';
+		node.classList.remove('done');
 
 				var button = document.querySelector('.doneTodo');
 				button.addEventListener('click', function(){

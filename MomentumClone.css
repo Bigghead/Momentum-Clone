@@ -100,13 +100,13 @@ li{
   margin-left: 20px;
   transition: all 0.7s ease;
   border: 1px solid white;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #FF6347;
   outline:none;
+  padding-left: 0;
 }
 
 .remove:hover{
-  border: 2px solid white;
   color: #B22222;
   cursor: pointer;
 }
