@@ -1,5 +1,5 @@
-
 console.log(localStorage);
+
 
 //===============Background Image================
 
@@ -118,50 +118,36 @@ var todoInput = document.querySelector('ul');
 var mainFocus = document.querySelector('#mainFocus');
 
 
-if(localStorage.todo !== 'null'){ //if there is a todo
-	mainFocus.innerText = 'Today\'s Goal: ';
-	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.getItem("todo")+ '<span class="remove"> <i class="fa fa-times" aria-hidden="true"></i></span>';
-	todoInput.appendChild(node);
-	input.value = '';
-	input.style.display = 'none';
-	node.classList.remove('done');
-
-	  var button = document.querySelector('.doneTodo');
-	  button.addEventListener('click', function(){
-		this.parentNode.classList.toggle('done');
-	  });
-
-		var remove = document.querySelector('.remove');
-		remove.addEventListener('click', function(){
-		node.parentNode.removeChild(node);
-		localStorage.todo = 'null';
-		mainFocus.innerText = 'What Is Your Main Focus For Today?';
-		input.style.display = '';
-		});
+if(localStorage.todo !== ''){ //if there is a todo
+	editTodo();
 }
 
 
 input.addEventListener('keypress', function(e){
 	if(e.keyCode === 13){
-		mainFocus.innerText = 'Today\'s Goal: ';
-		localStorage.setItem('todo', input.value);
-		node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.getItem('todo')+' <span class="remove"> <i class="fa fa-times" aria-hidden="true"></i></span>';
-		todoInput.appendChild(node);
-		input.value = '';
-		input.style.display = 'none';
-		node.classList.remove('done');
-
-				var button = document.querySelector('.doneTodo');
-				button.addEventListener('click', function(){
-					this.parentNode.classList.toggle('done');
-				});
-
-				var remove = document.querySelector('.remove');
-				remove.addEventListener('click', function(){
-					node.parentNode.removeChild(node);
-					localStorage.todo = 'null';
-					mainFocus.innerText = 'What Is Your Main Focus For Today?';
-					input.style.display = '';
-				});
+		localStorage.todo = input.value;
+		editTodo();
     }
   });
+
+function editTodo(){
+	mainFocus.innerText = 'Today\'s Goal: ';
+	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.getItem("todo")+ '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span>';
+	todoInput.appendChild(node);
+	input.value = '';
+	input.style.display = 'none';
+	node.classList.remove('done');
+
+		var button = document.querySelector('.doneTodo');
+		button.addEventListener('click', function(){
+		this.parentNode.classList.toggle('done');
+		});
+
+		var remove = document.querySelector('.remove');
+		remove.addEventListener('click', function(){
+		node.parentNode.removeChild(node);
+		localStorage.todo = '';
+		mainFocus.innerText = 'What Is Your Main Focus For Today?';
+		input.style.display = '';
+		});
+}
