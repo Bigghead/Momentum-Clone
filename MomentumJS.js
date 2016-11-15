@@ -100,7 +100,7 @@ var currentDate = document.getElementById('date');
 var randomQuote = document.getElementById('randomQuote');
 var author = document.querySelector('.quoteAuthor');
 var quote = new XMLHttpRequest();
-	quote.open('GET', 'http://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&' + new Date().getTime().toString());
+	quote.open('GET', 'https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&' + new Date().getTime().toString());
 	quote.onload = function(){
 		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
 		console.log(randomQuotes);
@@ -118,17 +118,16 @@ var todoInput = document.querySelector('ul');
 var mainFocus = document.querySelector('#mainFocus');
 
 
-if(localStorage.todo !== ''){ //if there is a todo
-	editTodo();
-}
+if(localStorage.todo !== '' || localStorage.todo !== null ||
+  localStorage.todo !== 'null'){ //if there is a todo
+		input.addEventListener('keypress', function(e){
+			if(e.keyCode === 13){
+				localStorage.todo = input.value;
+				editTodo();
+		    }
+		  });
+ }
 
-
-input.addEventListener('keypress', function(e){
-	if(e.keyCode === 13){
-		localStorage.todo = input.value;
-		editTodo();
-    }
-  });
 
 
 function editTodo(){
