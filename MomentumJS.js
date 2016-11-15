@@ -4,7 +4,7 @@ console.log(localStorage);
 
 //===============Background Image================
 
-var url = "https://source.unsplash.com/1600x900/?nature,morning";
+var url = "https://source.unsplash.com/1600x900/?nature,morning/daily";
 document.body.style.backgroundImage = "url" +"("+url+")"
 
 
