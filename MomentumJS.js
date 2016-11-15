@@ -102,7 +102,7 @@ var author = document.querySelector('.quoteAuthor');
 var quote = new XMLHttpRequest();
 	quote.open('GET', 'http://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&' + new Date().getTime().toString());
 	quote.onload = function(){
-		var randomQuotes = JSON.parse(quote.responseText);
+		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
 		console.log(randomQuotes);
 		randomQuote.innerText = '"' + randomQuotes.quoteText + '"';
 		author.innerText = '-' + randomQuotes.quoteAuthor;
@@ -129,6 +129,7 @@ input.addEventListener('keypress', function(e){
 		editTodo();
     }
   });
+
 
 function editTodo(){
 	mainFocus.innerText = 'Today\'s Goal: ';
