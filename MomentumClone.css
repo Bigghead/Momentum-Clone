@@ -58,7 +58,7 @@ body{
 .quoteAuthor{
   opacity : 0;
   overflow: hidden;
-  transition: all .7s ease ;
+  transition: all 1s ease ;
 }
 
 #randomQuote:hover{
@@ -67,6 +67,7 @@ body{
 
 #randomQuote:hover + h3{
 opacity: 1;
+color: red;
 }
 
 input{
