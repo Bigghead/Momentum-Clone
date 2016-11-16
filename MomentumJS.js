@@ -81,13 +81,15 @@ var currentDate = document.getElementById('date');
 			hours = 12;
 		} else if(hours < 10){
 			hours = '0' + hours;
+		}	else if(hours >= 12){
+			ampm = 'PM';
 		} else if(hours > 12){
 			hours = hours - 12;
-			ampm = 'PM';
 		}
+		console.log(hours);
 
 		var greeting = document.querySelector('#greeting');
-		if(ampm === 'PM' && hours <= 5){
+		if(ampm === 'PM' && (hours <= 5 || hours === 12)){
 			greeting.innerText = 'Good Afternoon,';
 		} else if(ampm === 'PM' && hours >= 5){
 			greeting.innerText = 'Good Evening,';
@@ -118,11 +120,7 @@ var todoInput = document.querySelector('ul');
 var mainFocus = document.querySelector('#mainFocus');
 
 if(localStorage.buttonClass ==="active"){
-	saveClass();
-}
-function saveClass(){
-	node.className = "done";
-}
+node.className = "done";}
 
 
 if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localStorage.todo === null ||
@@ -147,9 +145,6 @@ function showTodo(){
 	input.addEventListener('keypress', function(e){
 		if(e.keyCode === 13 && input.value !== ''){
 			localStorage.todo = input.value;
-			if(node.className === 'done'){
-				node.classList.remove('done');
-			}
 			showTodo();
 			}
 		});
