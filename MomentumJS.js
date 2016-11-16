@@ -2,6 +2,7 @@ console.log(localStorage);
 //delete localStorage.todo;
 
 
+
 //===============Background Image================
 var url = "https://source.unsplash.com/category/nature/1600x900/daily";
 document.body.style.backgroundImage = "url" +"("+url+")"
@@ -116,16 +117,21 @@ var node = document.createElement('LI');
 var todoInput = document.querySelector('ul');
 var mainFocus = document.querySelector('#mainFocus');
 
+if(localStorage.buttonClass ==="active"){
+	saveClass();
+}
+function saveClass(){
+	node.className = "done";
+}
+
 
 if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localStorage.todo === null ||
   localStorage.todo === 'null')){ //if there is no todo or todo is empty
 		input.addEventListener('keypress', function(e){
-			if(e.keyCode === 13){
+			if(e.keyCode === 13 && input.value !== ''){
 				localStorage.todo = input.value;
 
-				if(node.className === 'done'){
-					node.classList.remove('done');
-				}
+
 				showTodo();
 		    }
 		  });
@@ -136,12 +142,16 @@ if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localSto
 
 function showTodo(){
 	mainFocus.innerText = 'Today\'s Goal: ';
+	if(node.className !== ''){
+	node.className = 'done';
+ }
 	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.todo+ '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span>';
+
 	todoInput.appendChild(node);
 	input.style.display = 'none';
 
 	input.addEventListener('keypress', function(e){
-		if(e.keyCode === 13){
+		if(e.keyCode === 13 && input.value !== ''){
 			localStorage.todo = input.value;
 			if(node.className === 'done'){
 				node.classList.remove('done');
@@ -150,11 +160,18 @@ function showTodo(){
 			}
 		});
 
+		//checkmark
 		var button = document.querySelector('.doneTodo');
 		button.addEventListener('click', function(){
 		this.parentNode.classList.toggle('done');
+		if(this.parentNode.className === "done"){
+			localStorage.buttonClass = "active"
+		}else{
+			localStorage.buttonClass = "";
+		}
 		});
 
+		//X button
 		var remove = document.querySelector('.remove');
 		remove.addEventListener('click', function(){
 		node.parentNode.removeChild(node);
