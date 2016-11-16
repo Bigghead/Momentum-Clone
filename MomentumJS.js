@@ -3,8 +3,7 @@ console.log(localStorage);
 
 
 //===============Background Image================
-
-var url = "https://source.unsplash.com/1600x900/?nature,morning/daily";
+var url = "https://source.unsplash.com/category/nature/1600x900/daily";
 document.body.style.backgroundImage = "url" +"("+url+")"
 
 
@@ -123,6 +122,10 @@ if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localSto
 		input.addEventListener('keypress', function(e){
 			if(e.keyCode === 13){
 				localStorage.todo = input.value;
+
+				if(node.className === 'done'){
+					node.classList.remove('done');
+				}
 				showTodo();
 		    }
 		  });
@@ -131,14 +134,21 @@ if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localSto
  }
 
 
-
 function showTodo(){
 	mainFocus.innerText = 'Today\'s Goal: ';
-	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.getItem("todo")+ '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span>';
+	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.todo+ '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span>';
 	todoInput.appendChild(node);
-	input.value = '';
 	input.style.display = 'none';
-	node.classList.remove('done');
+
+	input.addEventListener('keypress', function(e){
+		if(e.keyCode === 13){
+			localStorage.todo = input.value;
+			if(node.className === 'done'){
+				node.classList.remove('done');
+			}
+			showTodo();
+			}
+		});
 
 		var button = document.querySelector('.doneTodo');
 		button.addEventListener('click', function(){
@@ -151,5 +161,6 @@ function showTodo(){
 		localStorage.todo = '';
 		mainFocus.innerText = 'What Is Your Main Focus For Today?';
 		input.style.display = '';
+		input.value = '';
 		});
 }
