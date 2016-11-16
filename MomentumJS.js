@@ -130,8 +130,6 @@ if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localSto
 		input.addEventListener('keypress', function(e){
 			if(e.keyCode === 13 && input.value !== ''){
 				localStorage.todo = input.value;
-
-
 				showTodo();
 		    }
 		  });
@@ -142,12 +140,8 @@ if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localSto
 
 function showTodo(){
 	mainFocus.innerText = 'Today\'s Goal: ';
-	if(node.className !== ''){
-	node.className = 'done';
- }
 	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.todo+ '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span>';
-
-	todoInput.appendChild(node);
+  todoInput.appendChild(node);
 	input.style.display = 'none';
 
 	input.addEventListener('keypress', function(e){
@@ -179,5 +173,6 @@ function showTodo(){
 		mainFocus.innerText = 'What Is Your Main Focus For Today?';
 		input.style.display = '';
 		input.value = '';
+		localStorage.buttonClass = '';
 		});
 }
