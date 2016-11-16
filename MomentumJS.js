@@ -86,7 +86,6 @@ var currentDate = document.getElementById('date');
 		} else if(hours > 12){
 			hours = hours - 12;
 		}
-		console.log(hours);
 
 		var greeting = document.querySelector('#greeting');
 		if(ampm === 'PM' && (hours <= 5 || hours === 12)){
@@ -119,8 +118,11 @@ var node = document.createElement('LI');
 var todoInput = document.querySelector('ul');
 var mainFocus = document.querySelector('#mainFocus');
 
-if(localStorage.buttonClass ==="active"){
-node.className = "done";}
+if(localStorage.buttonClass === "active"){
+  node.className = "done";
+} else {
+	node.className = "";
+}
 
 
 if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localStorage.todo === null ||
@@ -156,7 +158,7 @@ function showTodo(){
 		if(this.parentNode.className === "done"){
 			localStorage.buttonClass = "active"
 		}else{
-			localStorage.buttonClass = "";
+			delete localStorage.buttonClass;
 		}
 		});
 
@@ -168,6 +170,6 @@ function showTodo(){
 		mainFocus.innerText = 'What Is Your Main Focus For Today?';
 		input.style.display = '';
 		input.value = '';
-		localStorage.buttonClass = '';
+		node.className = "";
 		});
 }
