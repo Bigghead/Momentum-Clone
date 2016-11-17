@@ -77,13 +77,16 @@ var currentDate = document.getElementById('date');
 		if(minutes < 10){
 			minutes = '0' + minutes;
 		}
+
+		if(hours >= 12){
+			ampm = 'PM';
+		}
+		
 		if(hours === 0){
 			hours = 12;
 		} else if(hours < 10){
 			hours = '0' + hours;
-		}	else if(hours >= 12){
-			ampm = 'PM';
-		} else if(hours > 12){
+		}	else if(hours > 12){
 			hours = hours - 12;
 		}
 
