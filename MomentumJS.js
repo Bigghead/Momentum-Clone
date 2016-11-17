@@ -2,7 +2,6 @@ console.log(localStorage);
 //delete localStorage.todo;
 
 
-
 //===============Background Image================
 var url = "https://source.unsplash.com/category/nature/1600x900/daily";
 document.body.style.backgroundImage = "url" +"("+url+")"
@@ -81,7 +80,7 @@ var currentDate = document.getElementById('date');
 		if(hours >= 12){
 			ampm = 'PM';
 		}
-		
+
 		if(hours === 0){
 			hours = 12;
 		} else if(hours < 10){
