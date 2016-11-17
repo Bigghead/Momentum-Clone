@@ -108,6 +108,7 @@ li{
 .remove:hover{
   color: #B22222;
   cursor: pointer;
+  background-color: grey;
 }
 
 
