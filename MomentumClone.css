@@ -6,6 +6,7 @@ html, body {
 }
 
 body{
+  background-repeat: no-repeat;
   color: white;
   text-shadow: 1px 1px 3px darkgrey;
 }
@@ -43,6 +44,8 @@ body{
   margin-top: 50px;
 }
 
+
+
 /*Quote Line */
 #randomQuote{
   text-align:center;
@@ -51,6 +54,7 @@ body{
 }
 
 .quoteAuthor{
+  text-align: center;
   opacity : 0;
   overflow: hidden;
   transition: all 1s ease ;
