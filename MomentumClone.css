@@ -134,8 +134,3 @@ li{
   text-decoration: line-through;
   color: #4B0082;
 }
-
-.fade-out {
-  opacity: 0;
-  animation: fadeOut .5s ease-in 1 forwards;
-}
