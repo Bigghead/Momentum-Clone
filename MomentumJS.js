@@ -63,13 +63,14 @@ geoRequest.onload = function() {
 	//Time Implementation
 var currentTime = document.getElementById('time');
 var currentDate = document.getElementById('date');
+
 	setInterval(function(){
 		var time = new Date();
 		var hours = time.getHours()
 		var minutes = time.getMinutes();
 		var seconds = time.getSeconds();
 
-		var ampm = 'AM';
+		var ampm = 'am';
 
 		var date = time.getDate();
 		var month = time.getMonth();
@@ -78,7 +79,7 @@ var currentDate = document.getElementById('date');
 		}
 
 		if(hours >= 12){
-			ampm = 'PM';
+			ampm = 'pm';
 		}
 
 		if(hours === 0){
@@ -90,13 +91,15 @@ var currentDate = document.getElementById('date');
 		}
 
 		var greeting = document.querySelector('#greeting');
-		if(ampm === 'PM' && (hours <= 5 || hours === 12)){
+		if(ampm === 'am' && hours <= 10){
+			gretting.innerText = 'Good Morning';
+		} else if(ampm === 'pm' && (hours <= 5 || hours === 12)){
 			greeting.innerText = 'Good Afternoon,';
-		} else if(ampm === 'PM' && hours >= 5){
+		} else if(ampm === 'pm' && hours >= 5){
 			greeting.innerText = 'Good Evening,';
 		}
 
-		currentTime.innerText = hours +':' + minutes + ' ' + ampm.toLowerCase();
+		currentTime.innerText = hours +':' + minutes;
 		currentDate.innerText = month + '/' +date;
 	}, 1000);
 
