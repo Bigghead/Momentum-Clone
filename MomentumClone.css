@@ -109,6 +109,7 @@ li{
   color: #B22222;
   cursor: pointer;
   background-color: grey;
+  border-color: #B22222;
 }
 
 
@@ -125,7 +126,8 @@ li{
 
 .doneTodo:hover {
   cursor: pointer;
-  background-color: black;
+  background-color: blue;
+  color:#ADFF2F;
 }
 
 .done{
