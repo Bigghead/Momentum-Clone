@@ -1,9 +1,9 @@
-console.log(localStorage);
+
 var mainContainer = document.getElementById("container");
 var quoteContainer = document.getElementById("quote-container");
 
 window.onload = function(){
-	if(!localStorage.hasOwnProperty('name')){
+	if(!localStorage.hasOwnProperty('name') || localStorage.name === null){
   var name = prompt("What is your name?");
   localStorage.name = name;
 
