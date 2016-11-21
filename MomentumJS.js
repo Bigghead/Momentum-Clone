@@ -1,6 +1,16 @@
 console.log(localStorage);
-//delete localStorage.todo;
+var mainContainer = document.getElementById("container");
+var quoteContainer = document.getElementById("quote-container");
 
+window.onload = function(){
+	if(!localStorage.hasOwnProperty('name')){
+  var name = prompt("What is your name?");
+  localStorage.name = name;
+
+ }
+ mainContainer.style.opacity = "1";
+ quoteContainer.style.opacity = "1";
+}
 
 //===============Background Image================
 var url = "https://source.unsplash.com/category/nature/1600x900/daily";
@@ -94,12 +104,12 @@ var currentDate = document.getElementById('date');
 		if(ampm === 'am' && hours <= 10){
 			greeting.innerText = 'Good Morning,';
 		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
-			greeting.innerText = 'Good Afternoon,';
+			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
 		} else if( ampm === 'pm' && hours >= 5){
 			greeting.innerText = 'Good Evening,';
 		}
 
-		currentTime.innerText = hours +':' + minutes;
+		currentTime.innerText = hours +':' + minutes ;
 		currentDate.innerText = month + '/' +date;
 	}, 1000);
 

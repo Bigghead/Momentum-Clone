@@ -8,7 +8,7 @@ html, body {
 body{
   background-repeat: no-repeat;
   color: white;
-  text-shadow: 1px 1px 3px darkgrey;
+  text-shadow: 1px 1px 3px black;
 }
 
 /**{
@@ -20,6 +20,12 @@ body{
   margin:auto;
   margin-top: 5%;
   text-align: center;
+  opacity:0;
+}
+
+#quote-container{
+  opacity: 0;
+
 }
 
 
@@ -49,7 +55,7 @@ body{
 /*Quote Line */
 #randomQuote{
   text-align:center;
-  margin-top: 80px;
+  margin-top:10%;
   text-shadow: none;
 }
 
