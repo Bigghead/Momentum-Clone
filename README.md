@@ -7,7 +7,7 @@ To clone the [Momentum Dashboard](https://momentumdash.com/)
 http://codepen.io/tropicalchancer/full/RGaQwq/ by @chance
 
 
-Contributors (First Draft)
+Contributors (First Draft)</br>
 Bigghead
 Mozar10
 mojjammil
