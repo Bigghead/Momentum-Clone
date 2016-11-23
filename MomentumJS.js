@@ -155,7 +155,7 @@ if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localSto
 
 function showTodo(){
 	mainFocus.innerText = 'Today\'s Goal: ';
-	node.innerHTML = '<span class="doneTodo"><i class="fa fa-check-circle-o" aria-hidden="true"></i></span> '+localStorage.todo+ '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span>';
+	node.innerHTML = '<span class="doneTodo"><span class="fa fa-check-circle-o" aria-hidden="true"></span></span> '+localStorage.todo+ '<span class="remove"><span class="fa fa-times" aria-hidden="true"></span></span>';
   todoInput.appendChild(node);
 	input.style.display = 'none';
 

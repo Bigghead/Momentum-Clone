@@ -1,10 +1,26 @@
+/** TABLE OF CONTENTS
+  1. Resets, etc 
+  2. General Styles
+  3. Weather
+  4. Main #container
+  5. Quote
+**/
 
+
+/* 1. Resets, etc - Paul Irish Border-Box*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 html, body {
   height:100vh;
-  overflow:hidden;
+  /*overflow:hidden;*/
 }
 
+/** GENERAL STYLES **/
 body{
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,26 +29,7 @@ body{
   text-shadow: 1px 1px 3px black;
 }
 
-/**{
-  box-sizing: border-box;
-}*/
-
-#container{
-  width: 70%;
-  margin:auto;
-  margin-top: 5%;
-  text-align: center;
-  opacity:0;
-}
-
-#quote-container{
-  opacity: 0;
-  position: fixed;
-  bottom:0;
-  width: 100%;
-}
-
-
+/** WEATHER **/
 #weather-container{
   text-align:right;
   font-size:2em;
@@ -48,34 +45,19 @@ body{
   font-size:0.5em;
 }
 
+/** Main #container **/
+#container{
+  width: 70%;
+  margin:auto;
+  margin-top: 5%;
+  text-align: center;
+  opacity:0;
+}
+
 #time{
   font-size: 10em;
   margin-bottom:0;
   margin-top: 50px;
-}
-
-
-
-/*Quote Line */
-#randomQuote{
-  text-align:center;
-  text-shadow: none;
-}
-
-.quoteAuthor{
-  text-align: center;
-  opacity : 0;
-  overflow: hidden;
-  transition: all 1s ease ;
-}
-
-#randomQuote:hover{
-  cursor: pointer;
-}
-
-#randomQuote:hover + h3{
-opacity: 1;
-color: red;
 }
 
 input{
@@ -93,9 +75,9 @@ input:focus{
   outline: none;
   border: none;
   border-bottom : 2px solid white;
-
 }
 
+/** today's goals **/
 ul{
   list-style-type: none;
   padding: 0;
@@ -107,7 +89,7 @@ li{
   margin-top: 15px;
 }
 
-
+/** Today's Goals Controls **/
 .remove{
   margin-left: 20px;
   transition: all 0.7s ease;
@@ -145,3 +127,38 @@ li{
   text-decoration: line-through;
   color: #4B0082;
 }
+
+/** QUOTE **/
+#quote-container{
+  opacity: 0;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+}
+
+/*Quote Line */
+#randomQuote{
+  text-align:center;
+  text-shadow: none;
+}
+
+.quoteAuthor{
+  text-align: center;
+  opacity : 0;
+  overflow: hidden;
+  transition: all 1s ease ;
+}
+
+#randomQuote:hover{
+  cursor: pointer;
+}
+
+#randomQuote:hover + h3{
+opacity: 1;
+color: red;
+}
+
+
+
+
+
