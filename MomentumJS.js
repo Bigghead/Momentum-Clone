@@ -83,7 +83,7 @@ var currentDate = document.getElementById('date');
 		var ampm = 'am';
 
 		var date = time.getDate();
-		var month = time.getMonth();
+		var month = time.getMonth() -1;
 		if(minutes < 10){
 			minutes = '0' + minutes;
 		}
