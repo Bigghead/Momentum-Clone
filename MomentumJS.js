@@ -102,19 +102,16 @@ var currentDate = document.getElementById('date');
 
 	var greeting = document.querySelector('#greeting');
 		if(ampm === 'am' && hours <= 10){
-<<<<<<< HEAD
 			greeting.innerText = 'Good Morning, ';
 		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
 			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
 		} else if( ampm === 'pm' && hours >= 5){
 			greeting.innerText = 'Good Evening, ';
-=======
 			greeting.innerText = 'Good Morning,' + localStorage.name;
 		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
 			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
 		} else if( ampm === 'pm' && hours >= 5){
 			greeting.innerText = 'Good Evening,' + localStorage.name;
->>>>>>> ce45f7d109f04800bf823bbd0af4ef22b7a252eb
 		}
 
 		currentTime.innerText = hours +':' + minutes ;
