@@ -178,7 +178,7 @@ ul.to-do{
 
 .quoteAuthor{
   text-align: center;
-  opacity : 0;
+  opacity : 1; /**i broke it somehow, will fix tho**/
   overflow: hidden;
   transition: all 1s ease ;
 }
@@ -187,7 +187,7 @@ ul.to-do{
   cursor: pointer;
 }
 
-#randomQuote:hover + h3{
+#randomQuote:hover + .quoteAuthor{
 opacity: 1;
 color: red;
 }
