@@ -83,7 +83,7 @@ var currentDate = document.getElementById('date');
 		var ampm = 'am';
 
 		var date = time.getDate();
-		var month = time.getMonth();
+		var month = time.getMonth() +1;
 		if(minutes < 10){
 			minutes = '0' + minutes;
 		}
@@ -100,13 +100,21 @@ var currentDate = document.getElementById('date');
 			hours = hours - 12;
 		}
 
-		var greeting = document.querySelector('#greeting');
+	var greeting = document.querySelector('#greeting');
 		if(ampm === 'am' && hours <= 10){
+<<<<<<< HEAD
 			greeting.innerText = 'Good Morning, ';
 		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
 			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
 		} else if( ampm === 'pm' && hours >= 5){
 			greeting.innerText = 'Good Evening, ';
+=======
+			greeting.innerText = 'Good Morning,' + localStorage.name;
+		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
+			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
+		} else if( ampm === 'pm' && hours >= 5){
+			greeting.innerText = 'Good Evening,' + localStorage.name;
+>>>>>>> ce45f7d109f04800bf823bbd0af4ef22b7a252eb
 		}
 
 		currentTime.innerText = hours +':' + minutes ;
