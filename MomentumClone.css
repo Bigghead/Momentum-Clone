@@ -2,11 +2,12 @@
 
 html, body {
   height:100vh;
+  width: 100vw;
   overflow:hidden;
 }
 
 body{
-  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   text-shadow: 1px 1px 3px black;
 }
