@@ -1,35 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <link rel="stylesheet" href="MomentumClone.css" media="screen" title="no title">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://erikflowers.github.io/weather-icons/css/weather-icons.css">
   <script src="https://use.fontawesome.com/7ffe815bc9.js"></script>
+  <title>Momentum App Clone</title>
 </head>
 <body>
   <div id="weather-container">
-    <i id="weather-icon"class="wi wi-day-sunny"></i> <span id='temperature'></span>
+    <span id="weather-icon" class="wi wi-day-sunny"></span> <span id="temperature"></span>
     <br/>
     <div id="region"></div>
   </div> <!-- end weather container -->
 
-  <div id='container'>
-    <h1 id='date'></h1>
-    <h1 id='time'></h1>
-    <h1 id='greeting'></h1>
-    <h2 id='mainFocus'>What is your main focus for today?</h2>
+  <div id="container">
+    <p id="date"></p>
+    <p id="time"></p>
+    <h1 id="greeting"></h1>
+    <h2 id="mainFocus">What is your main focus for today?</h2>
 
     <!-- todo list -->
     <input type="text" autofocus="autofocus"/>
     <ul></ul>
 
-  </div>
+  </div><!--end #container-->
 
   <div id="quote-container">
-    <h3 id='randomQuote'></h3>
-    <h3 class='quoteAuthor'></h3>
+    <h3 id="randomQuote"></h3>
+    <h3 class="quoteAuthor"></h3>
   </div>
 
 
-<script type="text/javascript" src='MomentumJS.js'></script>
+<script type="text/javascript" src="MomentumJS.js"></script>
 </body>
 </html>
