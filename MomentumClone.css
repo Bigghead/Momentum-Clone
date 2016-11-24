@@ -15,14 +15,14 @@ html {
   box-sizing: inherit;
 }
 
-html, body {
-  height: 80%;
+html{
+  height: 100%;
   min-height: 100vh;
   margin: 0;
-  font-size: 100%;
+  font-size: 90%;  
 }
 
-@media (min-width: 30em){
+@media (min-width: 36em){
   /*480 px*/
  body {
     font-size: 100%;
@@ -36,25 +36,38 @@ body{
   background-size: cover;
   background-attachment: fixed;
   background-position: center; /** need to calibrate more **/
-  font-family: Helvetica, Arial, serif;
+  font-family: Helvetica, 'Segoe UI', Tahoma, Arial sans-serif;
   color: white;
+  line-height: 1.2;
   text-shadow: 1px 1px 3px black;  
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
 }
 
 /** WEATHER **/
 #weather-container{
   text-align:right;
-  font-size:2em;
-  font-family: 'Oswald', sans-serif;
   margin-right: 10px;
 }
 
-#temperature{
-  font-size:0.5em;
+.wi {
+  padding-right: 0.2em;
 }
 
-#region{
-  font-size:0.5em;
+.wi, 
+#temperature { /* weather icon font */
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+#region {
+  margin-top: -0.6em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
 }
 
 /** Main #container **/
@@ -66,23 +79,45 @@ body{
   opacity:0;  
 }
 
+#date {
+  margin-top: 3em;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  letter-spacing: 0.15em;
+}
+
 #time{
-  font-size: 5.5em;
-  /*font-size: 710%;*/
-  margin-bottom:0;
-  margin-top: 50px;
-  letter-spacing: -0.01em;
+  margin: 0;
+  font-size: 8em;
+  letter-spacing: -0.02em;
 }
 
 #greeting {
-  font-size: 1.8em;
+  margin-bottom: 1em;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+
+#mainFocus { 
+  margin-top: 3em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
 @media (min-width: 30em){
   /*480 px*/
   #time{
-    /*font-size: 910%;*/
+    font-size: 10em;
   }
+
+  #greeting{
+    font-size: 3em;
+  }
+
+  #mainFocus { 
+    font-size: 1.8em;
+  } 
 }
 
 /*Input for Today's Focus*/
@@ -90,8 +125,8 @@ body{
   width: 100%;
   background: none;
   border: none;
-  border-bottom: 2px solid white;
-  padding: 0 0.5em;
+  border-bottom: 3px solid white;
+  padding: 1em 0.5em;
   font-size: 180%;
   color: white;
   text-align: center;
@@ -164,11 +199,24 @@ ul.to-do{
 
 /** QUOTE **/
 #quote-container{
-  opacity: 0;
-  /*position: fixed;*/
-  /*bottom:0;*/
-  width: 100%;
+  width: 70%;
+  margin: 0 15%;
+  padding-bottom: 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  opacity: 0;  
 }
+
+@media (max-height: 40em){
+  #quote-container {
+    position: relative;
+    width: 90%;
+    margin: 1em auto 0;
+    padding-bottom: 1em;
+  }  
+}
+
 
 /*Quote Line */
 #randomQuote{

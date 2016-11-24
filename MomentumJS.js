@@ -38,7 +38,7 @@ geoRequest.onload = function() {
 		var weatherIcon = document.getElementsByTagName('I')[0];
 		var weatherCondition = weatherData.weather[0].main;
 		  region.innerHTML  = weatherData.name; //'<h1></h1>'
-		  temp.innerHTML = Math.round((weatherData.main.temp - 32) * 5/9) + " " + "&deg";
+		  temp.innerHTML = Math.round((weatherData.main.temp - 32) * 5/9) + "&deg";
 
 		  // Change Weather Icon Based on Weather Condition
 		  switch (weatherCondition) {
@@ -113,7 +113,7 @@ var currentDate = document.getElementById('date');
 		currentDate.innerText = month + '/' +date;
 	}, 1000);
 
-//Random Quote
+// //Random Quote
 var randomQuote = document.getElementById('randomQuote');
 var author = document.querySelector('.quoteAuthor');
 var quote = new XMLHttpRequest();
