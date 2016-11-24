@@ -120,8 +120,8 @@ var quote = new XMLHttpRequest();
 	quote.open('GET', 'http://quotes.rest/qod.json?category=inspire');
 	quote.onload = function(){
 		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
-		randomQuote.innerText = '"' + randomQuotes.contents.quotes[0].quote + '"';
-		author.innerText = '-' + randomQuotes.contents.quotes[0].author;
+		randomQuote.innerText = '\u201C' + randomQuotes.contents.quotes[0].quote + '\u201D';
+		author.innerText = '\u2014' + randomQuotes.contents.quotes[0].author;
 	};
 
 	quote.send();
