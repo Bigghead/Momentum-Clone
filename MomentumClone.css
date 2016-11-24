@@ -42,7 +42,7 @@ body{
   text-shadow: 1px 1px 3px black;  
 }
 
-h1, h2, h3 {
+h1, h2{
   margin: 0;
   padding: 0;
 }
@@ -222,22 +222,27 @@ ul.to-do{
 #randomQuote{
   text-align:center;
   text-shadow: none;
+  padding: 0.5em;
+  display: block;
 }
 
 .quoteAuthor{
+  margin-top: 0;
   text-align: center;
-  opacity : 1; /**i broke it somehow, will fix tho**/
-  overflow: hidden;
-  transition: all 1s ease ;
+  transform: translateY(-30px);
+  opacity : 0; 
+  visibility: none;
+  transition: all 0.5s ease-in-out;
 }
 
 #randomQuote:hover{
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 #randomQuote:hover + .quoteAuthor{
-opacity: 1;
-color: red;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-15px);
 }
 
 

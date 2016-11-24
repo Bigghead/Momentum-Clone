@@ -114,17 +114,17 @@ var currentDate = document.getElementById('date');
 	}, 1000);
 
 // //Random Quote
-var randomQuote = document.getElementById('randomQuote');
-var author = document.querySelector('.quoteAuthor');
-var quote = new XMLHttpRequest();
-	quote.open('GET', 'http://quotes.rest/qod.json?category=inspire');
-	quote.onload = function(){
-		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
-		randomQuote.innerText = '\u201C' + randomQuotes.contents.quotes[0].quote + '\u201D';
-		author.innerText = '\u2014' + randomQuotes.contents.quotes[0].author;
-	};
+// var randomQuote = document.getElementById('randomQuote');
+// var author = document.querySelector('.quoteAuthor');
+// var quote = new XMLHttpRequest();
+// 	quote.open('GET', 'http://quotes.rest/qod.json?category=inspire');
+// 	quote.onload = function(){
+// 		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
+// 		randomQuote.innerText = '\u201C' + randomQuotes.contents.quotes[0].quote + '\u201D';
+// 		author.innerText = '\u2014' + randomQuotes.contents.quotes[0].author;
+// 	};
 
-	quote.send();
+// 	quote.send();
 
 
 //==============Basic ToDo Functionality=========
