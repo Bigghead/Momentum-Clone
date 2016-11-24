@@ -42,7 +42,7 @@ body{
   text-shadow: 1px 1px 3px black;  
 }
 
-h1, h2{
+h1, h2, h3{
   margin: 0;
   padding: 0;
 }
@@ -81,9 +81,15 @@ h1, h2{
 
 #date {
   margin-top: 3em;
-  margin-bottom: 0;
   font-size: 1.5em;
   letter-spacing: 0.15em;
+}
+
+@media (max-height: 48em){
+  #date {
+    margin-top: 0;
+    margin-bottom: 0;
+  }  
 }
 
 #time{
@@ -126,7 +132,7 @@ h1, h2{
   background: none;
   border: none;
   border-bottom: 3px solid white;
-  padding: 1em 0.5em;
+  padding: 0.5em;
   font-size: 180%;
   color: white;
   text-align: center;
@@ -201,7 +207,6 @@ ul.to-do{
 #quote-container{
   width: 70%;
   margin: 0 15%;
-  padding-bottom: 0;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -212,14 +217,14 @@ ul.to-do{
   #quote-container {
     position: relative;
     width: 90%;
-    margin: 1em auto 0;
-    padding-bottom: 1em;
+    margin: 2em auto 0;
   }  
 }
 
 
 /*Quote Line */
 #randomQuote{
+  margin-bottom: 0;
   text-align:center;
   text-shadow: none;
   padding: 0.5em;
@@ -227,12 +232,15 @@ ul.to-do{
 }
 
 .quoteAuthor{
-  margin-top: 0;
   text-align: center;
   transform: translateY(-30px);
   opacity : 0; 
   visibility: none;
   transition: all 0.5s ease-in-out;
+}
+
+@media and (max-height: 48em){
+
 }
 
 #randomQuote:hover{
@@ -242,7 +250,7 @@ ul.to-do{
 #randomQuote:hover + .quoteAuthor{
   opacity: 1;
   visibility: visible;
-  transform: translateY(-15px);
+  transform: translateY(-8px);
 }
 
 
