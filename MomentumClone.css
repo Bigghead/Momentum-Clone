@@ -208,7 +208,7 @@ ul.to-do{
   opacity: 0;  
 }
 
-@media (max-height: 40em){
+@media (max-height: 44em){
   #quote-container {
     position: relative;
     width: 90%;
