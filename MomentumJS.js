@@ -155,7 +155,7 @@ if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localSto
 
 function showTodo(){
 	mainFocus.innerText = 'Today\'s Goal: ';
-	node.innerHTML = '<span class="doneTodo"><span class="fa fa-check-circle-o" aria-hidden="true"></span></span> '+localStorage.todo+ '<span class="remove"><span class="fa fa-times" aria-hidden="true"></span></span>';
+	node.innerHTML = '<span class="doneTodo"><span class="check-box"></span></span><span class="to-do-item">' + localStorage.todo + '</span><span class="remove">x</span>';
   todoInput.appendChild(node);
 	input.style.display = 'none';
 
@@ -169,12 +169,12 @@ function showTodo(){
 		//checkmark
 		var button = document.querySelector('.doneTodo');
 		button.addEventListener('click', function(){
-		this.parentNode.classList.toggle('done');
-		if(this.parentNode.className === "done"){
-			localStorage.buttonClass = "active"
-		}else{
-			delete localStorage.buttonClass;
-		}
+			this.parentNode.classList.toggle('done');
+			if(this.parentNode.className === "done"){
+				localStorage.buttonClass = "active"
+			}else{
+				delete localStorage.buttonClass;
+			}
 		});
 
 		//X button

@@ -57,8 +57,8 @@ h1, h2, h3{
   padding-right: 0.2em;
 }
 
-.wi, 
-#temperature { /* weather icon font */
+.wi,  /* weather icon font */
+#temperature { 
   font-size: 1.5em;
   font-weight: 700;
 }
@@ -172,43 +172,127 @@ ul.to-do{
   margin-top: 15px;
 }
 
+.to-do-item {
+  display: inline-block;
+}
+
 /** Today's Goals Controls **/
 .remove{
-  margin-left: 20px;
-  transition: all 0.7s ease;
-  border: 1px solid white;
-  border-radius: 100%;
-  background-color: #FF6347;
-  outline:none;
-  padding-left: 0;
+  position: relative;
+  display: inline-block;
+  margin-left: 25px;
+  margin-bottom: 6px;
+  font-family: Verdana, sans-serif;
+  font-size: 0.6em;
+  color: rgba(255,255,255, 0.8);
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
-.remove:hover{
-  color: #B22222;
-  cursor: pointer;
-  background-color: grey;
-  border-color: #B22222;
+.remove:after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid white;
+  border-radius: 50%;
+  opacity: 0;
+
+  position: absolute;
+  top: -2px;
+  left: -9px;
+
+  transition: all 0.5s ease-in-out;
 }
+
+.remove:hover:after{ /*show border on hover*/
+  opacity: 1;
+}
+
+.remove:hover {
+  transform: scale(1.1);
+}
+
+/*check box*/
 
 .doneTodo {
-  color: #fff;
-  background-color: #6496c8;
-  border: 2px solid white;
-  border-radius: 100%;
-  outline:none;
-  transition: all 0.7s ease;
-  margin-right:20px;
-}
-
-.doneTodo:hover {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;  
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 2px;
   cursor: pointer;
-  background-color: blue;
-  color:#ADFF2F;
 }
 
-.done{
+/* check-box arrow */
+.check-box:before,
+.check-box:after {
+  display: inline-block;
+  content: '';  
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  transform-origin: left top;
+  opacity: 0;
+  visibility: none;
+}
+
+/* bottom check */
+.check-box:before {
+  width: 6px ;
+  height: 3px;  
+  transform: rotate(50deg);
+  bottom: 5px;
+  left: 3px;  
+}
+
+/* top check */
+.check-box:after {
+  width: 15px ;
+  height: 3px;  
+  transform: rotate(-45deg);
+  bottom: 1px;
+  left: 3px;
+
+  z-index: -1;
+}
+
+@keyframes bottomcheck{
+  0%   { width: 0; }
+  50%  { width: 0; }
+  100% { width: 6px; }
+}
+
+@keyframes topcheck{
+  0%   { width: 0; }
+  50%  { width: 0; }
+  100% { width: 15px; }  
+}
+
+.done .doneTodo {
+  border-color: rgba(255,255,255,0.6);
+}
+
+.done .check-box:before,
+.done .check-box:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.done .check-box:before {
+  animation: bottomcheck .2s ease 0s forwards;
+}
+
+.done .check-box:after {
+  animation: topcheck .4s ease 0s forwards;
+}
+
+.done .to-do-item{
   text-decoration: line-through;
-  color: #4B0082;
+  color: rgba(255,255,255,0.8);
 }
 
 /** QUOTE **/
@@ -237,6 +321,8 @@ ul.to-do{
   text-shadow: none;
   padding: 0.5em;
   display: block;
+  cursor: pointer;  
+  transition: all 0.5s ease-in-out;
 }
 
 .quoteAuthor{
@@ -247,18 +333,13 @@ ul.to-do{
   transition: all 0.5s ease-in-out;
 }
 
-@media and (max-height: 48em){
-
-}
-
 #randomQuote:hover{
-  cursor: pointer;  
+  transform: translateY(-15px);
 }
 
 #randomQuote:hover + .quoteAuthor{
   opacity: 1;
   visibility: visible;
-  transform: translateY(-8px);
 }
 
 
