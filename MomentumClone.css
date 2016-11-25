@@ -19,11 +19,11 @@ html{
   height: 100%;
   min-height: 100vh;
   margin: 0;
-  font-size: 90%;  
+  font-size: 80%;  
 }
 
 @media (min-width: 36em){
-  /*480 px*/
+  /*576 px*/
  body {
     font-size: 100%;
   }
@@ -40,6 +40,8 @@ body{
   color: white;
   line-height: 1.2;
   text-shadow: 1px 0 1px 2px rgba(0, 0, 0, 0.2);  
+
+  /*transform: translateZ(0);  hack(?) so bg doesn't flash when scrolled on mobile */
 }
 
 h1, h2, h3{
@@ -86,6 +88,7 @@ h1, h2, h3{
 }
 
 @media (max-height: 48em){
+  /* 768 px */
   #date {
     margin-top: 0;
     margin-bottom: 0;
@@ -104,11 +107,18 @@ h1, h2, h3{
   font-weight: 400;
 }
 
-#mainFocus { 
+.goal { 
   margin-top: 3em;
   margin-bottom: 0.5em;
   font-size: 1.5em;
   font-weight: 400;
+}
+
+/* when user has goal */
+.has-goal {
+  margin-top: 5em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 @media (min-width: 30em){
@@ -121,9 +131,13 @@ h1, h2, h3{
     font-size: 3em;
   }
 
-  #mainFocus { 
+  .goal { 
     font-size: 1.8em;
   } 
+
+  .has-goal {
+    font-size: 1.3em;
+  }
 }
 
 @media (min-width: 90em){
@@ -176,12 +190,15 @@ ul.to-do{
   display: inline-block;
 }
 
+
 /** Today's Goals Controls **/
+
+/* remove/x mark */
 .remove{
   position: relative;
   display: inline-block;
-  margin-left: 25px;
-  margin-bottom: 6px;
+  margin-left: 18px;
+  margin-bottom: 4px;
   font-family: Verdana, sans-serif;
   font-size: 0.6em;
   color: rgba(255,255,255, 0.8);
@@ -200,7 +217,7 @@ ul.to-do{
   opacity: 0;
 
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: -9px;
 
   transition: all 0.5s ease-in-out;
@@ -210,12 +227,8 @@ ul.to-do{
   opacity: 1;
 }
 
-.remove:hover {
-  transform: scale(1.1);
-}
 
 /*check box*/
-
 .doneTodo {
   position: relative;
   display: inline-block;
@@ -227,7 +240,7 @@ ul.to-do{
   cursor: pointer;
 }
 
-/* check-box arrow */
+/* check mark */
 .check-box:before,
 .check-box:after {
   display: inline-block;
@@ -272,6 +285,7 @@ ul.to-do{
   100% { width: 15px; }  
 }
 
+/*click that check box*/
 .done .doneTodo {
   border-color: rgba(255,255,255,0.6);
 }
@@ -283,11 +297,11 @@ ul.to-do{
 }
 
 .done .check-box:before {
-  animation: bottomcheck .2s ease 0s forwards;
+  animation: bottomcheck .25s ease 0s forwards;
 }
 
 .done .check-box:after {
-  animation: topcheck .4s ease 0s forwards;
+  animation: topcheck .35s ease 0s forwards;
 }
 
 .done .to-do-item{
@@ -309,7 +323,7 @@ ul.to-do{
   #quote-container {
     position: relative;
     width: 90%;
-    margin: 2em auto 0;
+    margin: 4.1em auto 0;
   }  
 }
 
@@ -322,7 +336,7 @@ ul.to-do{
   padding: 0.5em;
   display: block;
   cursor: pointer;  
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .quoteAuthor{
@@ -330,7 +344,7 @@ ul.to-do{
   transform: translateY(-30px);
   opacity : 0; 
   visibility: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 #randomQuote:hover{

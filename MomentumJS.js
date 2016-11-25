@@ -155,6 +155,7 @@ if(!localStorage.hasOwnProperty('todo') || (localStorage.todo === '' || localSto
 
 function showTodo(){
 	mainFocus.innerText = 'Today\'s Goal: ';
+	mainFocus.className += ' has-goal';
 	node.innerHTML = '<span class="doneTodo"><span class="check-box"></span></span><span class="to-do-item">' + localStorage.todo + '</span><span class="remove">x</span>';
   todoInput.appendChild(node);
 	input.style.display = 'none';
@@ -180,11 +181,12 @@ function showTodo(){
 		//X button
 		var remove = document.querySelector('.remove');
 		remove.addEventListener('click', function(){
-		node.parentNode.removeChild(node);
-		localStorage.todo = '';
-		mainFocus.innerText = 'What Is Your Main Focus For Today?';
-		input.style.display = '';
-		input.value = '';
-		node.className = "";
+			node.parentNode.removeChild(node);
+			localStorage.todo = '';
+			mainFocus.className = "goal";
+			mainFocus.innerText = 'What Is Your Main Focus For Today?';
+			input.style.display = '';
+			input.value = '';
+			node.className = "";
 		});
 }
