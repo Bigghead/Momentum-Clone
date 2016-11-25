@@ -74,7 +74,7 @@ h1, h2, h3{
 #container{
   width: 100%;
   margin-top: 5%;
-  padding: 1em;
+  padding: 1em 1em 0.5em;
   text-align: center;
   opacity:0;  
 }
@@ -124,6 +124,14 @@ h1, h2, h3{
   #mainFocus { 
     font-size: 1.8em;
   } 
+}
+
+@media (min-width: 90em){
+  /*1440 px*/
+  #time{
+    font-size: 11em;
+  }
+
 }
 
 /*Input for Today's Focus*/
