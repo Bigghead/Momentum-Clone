@@ -35,7 +35,7 @@ geoRequest.onload = function() {
 		var weatherData = JSON.parse(weatherRequest.responseText);
 		var temp = document.getElementById('temperature');
 		var region = document.getElementById('region');
-		var weatherIcon = document.getElementsByTagName('I')[0];
+		var weatherIcon = document.getElementById('weather-icon');
 		var weatherCondition = weatherData.weather[0].main;
 		  region.innerHTML  = weatherData.name; //'<h1></h1>'
 		  temp.innerHTML = Math.round((weatherData.main.temp - 32) * 5/9) + "&deg";
@@ -103,11 +103,6 @@ var currentDate = document.getElementById('date');
 	var greeting = document.querySelector('#greeting');
 		if(ampm === 'am' && hours <= 10){
 			greeting.innerText = 'Good Morning, ';
-		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
-			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
-		} else if( ampm === 'pm' && hours >= 5){
-			greeting.innerText = 'Good Evening, ';
-			greeting.innerText = 'Good Morning, ' + localStorage.name;
 		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
 			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
 		} else if( ampm === 'pm' && hours >= 5){
