@@ -102,29 +102,34 @@ var currentDate = document.getElementById('date');
 
 	var greeting = document.querySelector('#greeting');
 		if(ampm === 'am' && hours <= 10){
-			greeting.innerText = 'Good Morning,' + localStorage.name;
+			greeting.innerText = 'Good Morning, ';
 		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
 			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
 		} else if( ampm === 'pm' && hours >= 5){
-			greeting.innerText = 'Good Evening,' + localStorage.name;
+			greeting.innerText = 'Good Evening, ';
+			greeting.innerText = 'Good Morning, ' + localStorage.name;
+		} else if(ampm === 'pm' && (hours < 5 || hours === 12)){
+			greeting.innerText = 'Good Afternoon, ' + localStorage.name;
+		} else if( ampm === 'pm' && hours >= 5){
+			greeting.innerText = 'Good Evening, ' + localStorage.name;
 		}
 
 		currentTime.innerText = hours +':' + minutes ;
 		currentDate.innerText = month + '/' +date;
 	}, 1000);
 
-// //Random Quote
-// var randomQuote = document.getElementById('randomQuote');
-// var author = document.querySelector('.quoteAuthor');
-// var quote = new XMLHttpRequest();
-// 	quote.open('GET', 'http://quotes.rest/qod.json?category=inspire');
-// 	quote.onload = function(){
-// 		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
-// 		randomQuote.innerText = '\u201C' + randomQuotes.contents.quotes[0].quote + '\u201D';
-// 		author.innerText = '\u2014' + randomQuotes.contents.quotes[0].author;
-// 	};
+//Random Quote
+var randomQuote = document.getElementById('randomQuote');
+var author = document.querySelector('.quoteAuthor');
+var quote = new XMLHttpRequest();
+	quote.open('GET', 'http://quotes.rest/qod.json?category=inspire');
+	quote.onload = function(){
+		var randomQuotes = JSON.parse(quote.responseText.replace(/\\/g, ''));
+		randomQuote.innerText = '\u201C' + randomQuotes.contents.quotes[0].quote + '\u201D';
+		author.innerText = '\u2014' + randomQuotes.contents.quotes[0].author;
+	};
 
-// 	quote.send();
+	quote.send();
 
 
 //==============Basic ToDo Functionality=========
