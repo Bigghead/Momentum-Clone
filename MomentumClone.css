@@ -39,7 +39,7 @@ body{
   font-family: Helvetica, 'Segoe UI', Tahoma, Arial sans-serif;
   color: white;
   line-height: 1.2;
-  text-shadow: 1px 0 1px 2px rgba(0, 0, 0, 0.2);  
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.3);  
 
   /*transform: translateZ(0);  hack(?) so bg doesn't flash when scrolled on mobile */
 }
