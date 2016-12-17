@@ -18,7 +18,7 @@ To clone the [Momentum Dashboard](https://momentumdash.com/)
 - Quote
 - Random HD Image
 
-Contributors: <br>
+##Contributors: <br>
 Bigghead - Functionality (weather/quotes/time/greeting/todo-list)<br>
 Mozar10 - Functionality (weather/todo-list)<br>
 mojjammil - Functionality (quotes/time/greeting)<br>
