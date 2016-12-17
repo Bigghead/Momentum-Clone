@@ -12,7 +12,7 @@ http://rawgit.com/Bigghead/Momentum-Clone/master/index.html
 To clone the [Momentum Dashboard](https://momentumdash.com/)
 
 Contributors: <br>
-Bigghead - Functionality <br>
-Mozar10 - Functionality <br>
-mojjammil - Functionality <br>
+Bigghead - Functionality (weather/quotes/time/greeting/todo-list)<br>
+Mozar10 - Functionality (weather/todo-list)<br>
+mojjammil - Functionality (time/greeting)<br>
 thelittleblacksmith - Major Styling Overhaul<br>
