@@ -11,8 +11,8 @@ http://rawgit.com/Bigghead/Momentum-Clone/master/index.html
 ##Goals:
 To clone the [Momentum Dashboard](https://momentumdash.com/)
 
-Contributors:
-Bigghead - Functionality
-Mozar10 - Functionality
-mojjammil - Functionality
-thelittleblacksmith - Major Styling Overhaul
+Contributors: <br>
+Bigghead - Functionality <br>
+Mozar10 - Functionality <br>
+mojjammil - Functionality <br>
+thelittleblacksmith - Major Styling Overhaul<br>
