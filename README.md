@@ -19,7 +19,7 @@ To clone the [Momentum Dashboard](https://momentumdash.com/)
 - Random HD Image
 
 ##Contributors: <br>
-Bigghead - Functionality (weather/quotes/time/greeting/todo-list)<br>
-Mozar10 - Functionality (weather/todo-list)<br>
-mojjammil - Functionality (quotes/time/greeting)<br>
-thelittleblacksmith - Major Styling Overhaul<br>
+Bigghead - Functionality (weather/quotes/time/greeting/todo-list)<br><br>
+Mozar10 - Functionality (weather/todo-list)<br><br>
+mojjammil - Functionality (quotes/time/greeting)<br><br>
+thelittleblacksmith - Major Styling Overhaul<br><br>
