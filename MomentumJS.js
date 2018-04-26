@@ -19,7 +19,7 @@ document.body.style.backgroundImage = "url" +"("+url+")"
 
 // location function API call
 var geoRequest = new XMLHttpRequest();
-geoRequest.open("GET", "http://ipinfo.io/json");
+geoRequest.open("GET", "https://cors-anywhere.herokuapp.com/http://ipinfo.io/json");
 geoRequest.onload = function() {
 	geoObj = JSON.parse(geoRequest.responseText);
 	var lat = geoObj.loc.substr(0, 7);
@@ -28,7 +28,7 @@ geoRequest.onload = function() {
 
 	// weather data API call
 	var weatherRequest = new XMLHttpRequest();
-	weatherRequest.open('GET', 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&appid=332aac2b0595764b02d7634b86a9b463');
+	weatherRequest.open('GET', 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&appid=332aac2b0595764b02d7634b86a9b463');
 	weatherRequest.onload = function(){
 
 		//Declaring Variables
